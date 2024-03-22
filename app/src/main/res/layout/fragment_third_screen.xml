@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".presentation.onboarding.screens.FirstScreen">
+    tools:context=".presentation.onboarding.screens.ThirdScreen">
 
 
     <LinearLayout
@@ -19,14 +19,14 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:background="@color/black"
-            android:src="@drawable/common_google_signin_btn_icon_light_normal_background" />
+            android:src="@drawable/ic_launcher_foreground" />
 
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="Title 3"
             android:textSize="32sp"
             android:textStyle="bold" />
 
@@ -41,12 +41,11 @@
 
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/next3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:text="Далее" />
-
 
 </RelativeLayout>

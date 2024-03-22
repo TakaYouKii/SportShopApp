@@ -10,7 +10,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.sportshopapp.R
 
 
-class FirstScreen : Fragment() {
+class SecondScreen : Fragment() {
 
 
     override fun onCreateView(
@@ -18,12 +18,12 @@ class FirstScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_first_screen, container, false)
+        val view =  inflater.inflate(R.layout.fragment_second_screen, container, false)
 
         val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
 
-        view.findViewById<Button>(R.id.next).setOnClickListener{
-            viewPager?.currentItem = 1
+        view.findViewById<Button>(R.id.next2).setOnClickListener{
+            viewPager?.currentItem = 2
         }
         return view
     }

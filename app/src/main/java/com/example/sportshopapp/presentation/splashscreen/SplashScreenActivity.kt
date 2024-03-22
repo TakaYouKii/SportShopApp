@@ -1,6 +1,8 @@
 package com.example.sportshopapp.presentation.splashscreen
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -13,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.findNavController
 import com.example.sportshopapp.R
 import com.example.sportshopapp.presentation.main.MainActivity
+import com.example.sportshopapp.presentation.onboarding.OnboardingActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,11 +37,28 @@ class SplashScreenActivity : AppCompatActivity() {
             insets
         }
 
-        // Переход к основной активити через 3 секунды
-        Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish() // Закрыть SplashScreenActivity после перехода на MainActivity
-        }, 3000)
+        if(onBoardingFinished()){
+            // Переход к основной активити через 3 секунды
+            Handler().postDelayed({
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish() // Закрыть SplashScreenActivity после перехода на MainActivity
+            }, 3000)
+        }else{
+            // Переход к основной активити через 3 секунды
+            Handler().postDelayed({
+                val intent = Intent(this, OnboardingActivity::class.java)
+                startActivity(intent)
+                finish() // Закрыть SplashScreenActivity после перехода на MainActivity
+            }, 3000)
+        }
+
+    }
+
+
+    private fun onBoardingFinished() : Boolean{
+        val sharedPreferences: SharedPreferences = getSharedPreferences("OnBoarding", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getBoolean("Finished", false)
     }
 }
