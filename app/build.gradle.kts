@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -35,6 +36,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    viewBinding.enable = true
 }
 
 dependencies {

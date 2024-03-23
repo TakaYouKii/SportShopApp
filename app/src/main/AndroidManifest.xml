@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SportShopApp"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.registration.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.registration.LogInActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.registration.RegistrationActivity"
             android:exported="false" />
         <activity
@@ -29,7 +35,7 @@
             android:exported="false" />
         <activity
             android:name=".presentation.main.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

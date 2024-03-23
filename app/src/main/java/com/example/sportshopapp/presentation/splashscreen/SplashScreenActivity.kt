@@ -37,27 +37,28 @@ class SplashScreenActivity : AppCompatActivity() {
             insets
         }
 
-        if(onBoardingFinished()){
-            // Переход к основной активити через 3 секунды
+        if (onBoardingFinished()) {
+
             Handler().postDelayed({
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-                finish() // Закрыть SplashScreenActivity после перехода на MainActivity
-            }, 3000)
-        }else{
-            // Переход к основной активити через 3 секунды
+                finish()
+            }, 2000)
+        } else {
+
             Handler().postDelayed({
                 val intent = Intent(this, OnboardingActivity::class.java)
                 startActivity(intent)
-                finish() // Закрыть SplashScreenActivity после перехода на MainActivity
-            }, 3000)
+                finish()
+            }, 2000)
         }
 
     }
 
 
-    private fun onBoardingFinished() : Boolean{
-        val sharedPreferences: SharedPreferences = getSharedPreferences("OnBoarding", Context.MODE_PRIVATE)
+    private fun onBoardingFinished(): Boolean {
+        val sharedPreferences: SharedPreferences =
+            getSharedPreferences("OnBoarding", Context.MODE_PRIVATE)
 
         return sharedPreferences.getBoolean("Finished", false)
     }

@@ -6,6 +6,6 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="sign_up">Вход</string>
+    <string name="sign_in">Вход</string>
 
 </resources>
