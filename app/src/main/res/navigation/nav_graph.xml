@@ -10,19 +10,29 @@
         android:name="com.example.sportshopapp.presentation.main.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
+
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.example.sportshopapp.presentation.main.CategoryFragment"
-        android:label="fragment_cathegory"
-        tools:layout="@layout/fragment_cathegory" />
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.sportshopapp.presentation.main.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.sportshopapp.presentation.main.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+
+    <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.sportshopapp.presentation.main.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+
+
 </navigation>
